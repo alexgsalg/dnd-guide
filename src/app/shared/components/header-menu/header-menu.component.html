@@ -1,0 +1,14 @@
+<nav class="header_menu" [class.active]="show">
+  <a
+    *ngFor="let item of navList"
+    [routerLink]="item.route"
+    class="header_menu__link nav_link"
+  >
+    <img
+      src="../../../../assets/icons/{{ item.icon }}.png"
+      [alt]="item.icon"
+      class="header_menu__img"
+    />
+    {{ item.name }}
+  </a>
+</nav>

@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="wrapper">
+    <div class="header_logo">
+      <a routerLink="/">
+        <img
+          class="header_logo__img"
+          src="./../../assets/images/dnd_logo.png"
+          alt="RPG CC"
+        />
+        <span class="header_logo__text">D&D <span>Guide</span></span>
+      </a>
+    </div>
+
+    <ng-container *ngIf="handleIsMobile()">
+      <button mat-icon-button class="header_mobile" (click)="toggleMenu()">
+        <mat-icon
+          *ngIf="showMobileMenu"
+          aria-hidden="false"
+          aria-label="close icon"
+          >close</mat-icon
+        >
+        <mat-icon
+          *ngIf="!showMobileMenu"
+          aria-hidden="false"
+          aria-label="close icon"
+          >menu</mat-icon
+        >
+      </button>
+    </ng-container>
+    <app-header-menu [show]="showMobileMenu" />
+  </div>
+</header>

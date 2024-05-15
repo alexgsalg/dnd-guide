@@ -1,0 +1,22 @@
+<mat-card class="feature_card">
+  <mat-card-header class="feature_card__header">
+    <img
+      src="../../../../assets/images/{{ card?.cover }}"
+      class="feature_card__cover"
+      [alt]="card?.title"
+    />
+    <span class="feature_card__cover_over"></span>
+  </mat-card-header>
+  <mat-card-content class="feature_card__content">
+    <h3 class="feature_card__title">{{ card?.title }}</h3>
+    <p class="feature_card__text">{{ card?.text }}</p>
+  </mat-card-content>
+  <mat-card-actions class="feature_card__actions">
+    <app-button
+      variant="secondary"
+      size="sm"
+      (click)="onRedirect(card?.route)"
+      >{{ card?.btnText }}</app-button
+    >
+  </mat-card-actions>
+</mat-card>

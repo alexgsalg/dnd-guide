@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dndguide-app"
+  },
+  "targets": {
+    "dndguide-app": {
+      "hosting": {
+        "dnd-guide": [
+          "dndguide-app"
+        ]
+      }
+    }
+  }
+}

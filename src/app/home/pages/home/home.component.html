@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="wrapper">
+    <h1 class="hero__title">Your D&D guide wherever you are!</h1>
+    <p class="hero__subtitle">
+      For players and Dungeon masters, make your session more dynamic and fun.
+    </p>
+    <app-button size="lg" variant="primary">Start Exploring</app-button>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrapper">
+    <app-feature-card *ngFor="let card of cards" [card]="card" />
+  </div>
+</section>
+
+<section class="builder">
+  <div class="wrapper">
+    <h2 class="builder__title">Build your RPG character in a few clicks!</h2>
+    <p class="builder__subtitle">
+      Easily build your character with a backgroundstory and Avatar using the
+      power of AI.
+    </p>
+    <app-button size="lg" variant="primary">Build your hero</app-button>
+  </div>
+</section>

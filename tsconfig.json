@@ -21,7 +21,24 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@config/*": [
+        "./src/app/config/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@home/*": [
+        "./src/app/home/*"
+      ],
+      "@spells/*": [
+        "./src/app/spells/*"
+      ],
+      "@monsters/*": [
+        "./src/app/monsters/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

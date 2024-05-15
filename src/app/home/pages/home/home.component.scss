@@ -1,0 +1,84 @@
+@import "../../../../assets/scss/sizing";
+
+.hero {
+  width: 100%;
+  min-height: calc(60vh - 2.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(35, 43, 47, 0),
+      rgba(35, 43, 47, 0.5)
+    ),
+    url("../../../../assets/images/embers.png");
+  background-position: 50% 75%;
+  background-size: cover;
+
+  & > .wrapper {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $size-md;
+    padding: 5vh 2rem 15vh;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: 0.2rem;
+  }
+
+  &__subtitle {
+    max-width: 500px;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px var(--clr-darker);
+  }
+}
+
+.features {
+  padding: 2vh 2rem 10vh;
+
+  & > .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: $size-lg;
+  }
+}
+
+.builder {
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(35, 43, 47, 0),
+      rgba(35, 43, 47, 0.9)
+    ),
+    url("../../../../assets/images/dnd.jpg");
+  background-position: 50%;
+  background-size: cover;
+
+  & > .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $size-md;
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 5vh 2rem 5vh;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 3vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: 0.2rem;
+  }
+
+  &__subtitle {
+    max-width: 500px;
+    font-size: 1.2rem;
+  }
+}

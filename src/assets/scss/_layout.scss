@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+  width: 100vw;
+  min-height: calc(100vh - 2rem);
+  padding-top: $size-base * 4;
+  background-image: linear-gradient(
+      0deg,
+      rgba(35, 43, 47, 0.85),
+      rgba(35, 43, 47, 0.85)
+    ),
+    url("../images/bg-scroll.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--color-light);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $size-2xs;
+}

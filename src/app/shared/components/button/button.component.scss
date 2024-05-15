@@ -1,0 +1,72 @@
+@import "../../../../assets/scss/sizing";
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: $size-2xs $size-xs;
+  color: var(--color);
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 0;
+  outline: 0;
+  background-color: var(--background);
+  transition: all ease-in-out 250ms;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    display: block;
+    height: calc(100% + 8px);
+    width: calc(100% + 8px);
+    background-image: var(--after-img);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  &_primary {
+    --color: var(--clr-darker);
+    --background: var(--clr-vintage);
+    --after-img: url("../../../../assets/images/button-golder-border.png");
+
+    &:hover {
+      background-color: var(--clr-vintage-dark);
+    }
+  }
+
+  &_secondary {
+    --color: var(--clr-lighter);
+    --background: var(--clr-red-darker);
+    --after-img: url("../../../../assets/images/button-red-border.png");
+
+    &:hover {
+      background-color: var(--clr-red-dark);
+    }
+  }
+
+  &--small {
+    padding: $size-2xs $size-xs;
+  }
+
+  &--big {
+    padding: $size-sm $size-md;
+    font-size: $size-md;
+  }
+
+  &--accent {
+    color: var(--clr-light);
+    background-color: var(--clr-red);
+
+    &:hover {
+      background-color: var(--clr-red-dark);
+    }
+  }
+  &.disabled {
+    background-color: var(--clr-dark);
+    cursor: not-allowed;
+  }
+}

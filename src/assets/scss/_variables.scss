@@ -1,0 +1,69 @@
+:root {
+  // Fonts
+  --font-heading: 'BreatheFire';
+  --font-default: 'Poppins';
+
+  // Colors
+  --clr-white: #ffffff;
+  --clr-light: #ffffffd0;
+  --clr-lighter: #fafafa;
+	--clr-vintage-light: #eae8dd;
+  --clr-vintage: #E8E5D9;
+  --clr-vintage-dark: #D2CCB4;
+  --clr-gray-lighter: #ffffff99;
+  --clr-gray-light: #c4c4c4;
+  --clr-gray-medium: #666666;
+  --clr-gray-dark: #666666;
+  --clr-blue-light: #40739e;
+  --clr-blue-medium: #273c75;
+  --clr-blue-dark: #3c4353;
+  --clr-blue-darker: #2f3640;
+  --clr-green-light: #0cd10c;
+  --clr-green-medium: #2f9c0a;
+  --clr-green-dark: #2a880b;
+  --clr-green-darker: #2f6b1b;
+  --clr-red-light: #e84118;
+  --clr-red-medium: #c23616;
+  --clr-red-dark: #a31f1f;
+  --clr-red-darker: #822000;
+  --clr-dark: #444444;
+  --clr-darker: #20262e;
+  --clr-darkest: #151515;
+
+  --shadow: rgba(0, 0, 0, 0.4);
+  --overlay: rgba(0, 0, 0, 0.6);
+
+  --border-light: #ffffff1f;
+
+  // Font size
+  --fontsize-1: 5rem;
+  --fontsize-2: 4rem;
+  --fontsize-3: 3rem;
+  --fontsize-4: 2.2rem;
+  --fontsize-5: 1.8rem;
+  --fontsize-6: 1.6rem;
+  --fontsize-7: 1.4rem;
+  --fontsize-8: 1.2rem;
+  --fontsize-default: 1.6rem;
+
+  // Breakpoints
+  --break-sm: 57.6rem;
+  --break-md: 76.8rem;
+  --break-lg: 99.2rem;
+  --break-xl: 120rem;
+  --break-xxl: 140rem;
+
+  // Gap
+  --gap-sm: 2rem;
+  --gap-md: 3rem;
+  --gap-lg: 6rem;
+
+  // Grid
+  --grid-width: 114rem;
+  --gutter-vertical: 6rem;
+  --gutter-vertical-small: 3rem;
+
+  // Transitions
+  --trs: 0.3s;
+  ---trs-slow: 0.5s;
+}

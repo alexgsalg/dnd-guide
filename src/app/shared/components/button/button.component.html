@@ -1,0 +1,10 @@
+<button
+  type="button"
+  class="btn btn_{{ variant }}"
+  [class.disabled]="disabled"
+  [class.btn--small]="size === 'sm'"
+  [class.btn--big]="size === 'lg'"
+  [disabled]="disabled"
+>
+  <ng-content></ng-content>
+</button>
