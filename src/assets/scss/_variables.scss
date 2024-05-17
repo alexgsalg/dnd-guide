@@ -1,15 +1,15 @@
 :root {
   // Fonts
-  --font-heading: 'BreatheFire';
-  --font-default: 'Poppins';
+  --font-heading: "BreatheFire";
+  --font-default: "Poppins";
 
   // Colors
   --clr-white: #ffffff;
   --clr-light: #ffffffd0;
   --clr-lighter: #fafafa;
-	--clr-vintage-light: #eae8dd;
-  --clr-vintage: #E8E5D9;
-  --clr-vintage-dark: #D2CCB4;
+  --clr-vintage-light: #eae8dd;
+  --clr-vintage: #e8e5d9;
+  --clr-vintage-dark: #d2ccb4;
   --clr-gray-lighter: #ffffff99;
   --clr-gray-light: #c4c4c4;
   --clr-gray-medium: #666666;
@@ -36,15 +36,14 @@
   --border-light: #ffffff1f;
 
   // Font size
-  --fontsize-1: 5rem;
-  --fontsize-2: 4rem;
-  --fontsize-3: 3rem;
-  --fontsize-4: 2.2rem;
-  --fontsize-5: 1.8rem;
-  --fontsize-6: 1.6rem;
-  --fontsize-7: 1.4rem;
-  --fontsize-8: 1.2rem;
-  --fontsize-default: 1.6rem;
+  --fontsize-xl: 2rem; //32px
+  --fontsize-lg: 1.25rem; // 24px
+  --fontsize-2md: 1.125rem; // 18px
+  --fontsize-md: 1rem; // 16px
+  --fontsize-sm: 0.875rem; // 14px
+  --fontsize-xs: 0.75rem; // 12px
+  --fontsize-2xs: 0.5rem; // 8px
+  --fontsize-default: 1rem;
 
   // Breakpoints
   --break-sm: 57.6rem;
