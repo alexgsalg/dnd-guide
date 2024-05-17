@@ -1,0 +1,23 @@
+@import "../../../../assets/scss/sizing";
+
+.card-grid {
+  padding: 2vh 2rem 10vh;
+
+  & > .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: $size-lg;
+  }
+}
+
+.spell_grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: $size-2xs $size-xs;
+
+  span {
+    font-size: var(--fontsize-xs);
+  }
+}

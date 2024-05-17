@@ -1,0 +1,47 @@
+<app-page-header title="Spells" />
+
+<section class="spells card-grid">
+  <div class="wrapper">
+    <app-search-bar
+      [options]="rawList"
+      (onSelection)="onSelection($event)"
+      (searchLoading)="handleSearchLoading($event)"
+    />
+  </div>
+  <div class="wrapper">
+    <ng-container *ngIf="!pageLoading; else skeleton">
+      <app-game-info-card
+        *ngFor="let spell of spellList"
+        [title]="spell.name"
+        [desc]="spell.desc[0]"
+      >
+        <div class="spell_grid">
+          <span>{{
+            spell.level === 0 ? "Cantrip" : "Level: " + spell.level
+          }}</span>
+          <span *ngIf="spell.duration"
+            ><strong>Duration: </strong>{{ spell.duration }}</span
+          >
+          <span *ngIf="spell.range"
+            ><strong>Range: </strong>{{ spell.range }}</span
+          >
+          <span *ngIf="spell.damage"
+            ><strong>Damage:</strong> {{ spell.damage }}</span
+          >
+          <span *ngIf="spell.attack_type"
+            ><strong>Type: </strong>{{ spell.attack_type }}</span
+          >
+          <span *ngIf="spell.ritual">Ritual required</span>
+        </div>
+      </app-game-info-card>
+    </ng-container>
+  </div>
+</section>
+
+<ng-template #skeleton>
+  <app-game-info-card
+    *ngFor="let spell of [0, 1, 2, 3, 4, 5]"
+    [loading]="pageLoading"
+  >
+  </app-game-info-card>
+</ng-template>
