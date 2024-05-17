@@ -1,1 +1,69 @@
-<p>monsters works!</p>
+<app-page-header title="Monsters" />
+
+<section class="monsters card-grid">
+  <div class="wrapper">
+    <app-search-bar
+      [options]="rawList"
+      label="Search Monster..."
+      (onSelection)="onSelection($event)"
+      (searchLoading)="handleSearchLoading($event)"
+    />
+  </div>
+  <div class="wrapper">
+    <ng-container *ngIf="!pageLoading; else skeleton">
+      <app-game-info-card
+        *ngFor="let monster of monsterList"
+        [title]="monster.name"
+      >
+        <div class="monster_grid">
+          <span *ngIf="monster.type"
+            ><strong>Type: </strong>{{ monster.type | titlecase }}</span
+          >
+          <span *ngIf="monster.size"
+            ><strong>Size: </strong>{{ monster.size | titlecase }}</span
+          >
+          <span *ngIf="monster.alignment"
+            ><strong>Alignment: </strong
+            >{{ monster.alignment | titlecase }}</span
+          >
+          <span *ngIf="monster.xp"><strong>XP:</strong> {{ monster.xp }}</span>
+          <span *ngIf="monster.hit_points">
+            <strong>HP: </strong>{{ monster.hit_points }}
+          </span>
+          <span *ngIf="monster.proficiency_bonus">
+            <strong>Bonus: </strong>{{ monster.proficiency_bonus }}
+          </span>
+        </div>
+
+        <div class="monster_grid">
+          <span *ngIf="monster.dexterity">
+            <strong>DEX: </strong>{{ monster.dexterity }}
+          </span>
+          <span *ngIf="monster.charisma">
+            <strong>CHA: </strong>{{ monster.charisma }}
+          </span>
+          <span *ngIf="monster.strength">
+            <strong>STR: </strong>{{ monster.strength }}
+          </span>
+          <span *ngIf="monster.constitution">
+            <strong>CON: </strong>{{ monster.constitution }}
+          </span>
+          <span *ngIf="monster.intelligence">
+            <strong>INT: </strong>{{ monster.intelligence }}
+          </span>
+          <span *ngIf="monster.wisdom">
+            <strong>WIS: </strong>{{ monster.wisdom }}
+          </span>
+        </div>
+      </app-game-info-card>
+    </ng-container>
+  </div>
+</section>
+
+<ng-template #skeleton>
+  <app-game-info-card
+    *ngFor="let monster of [0, 1, 2, 3, 4, 5]"
+    [loading]="pageLoading"
+  >
+  </app-game-info-card>
+</ng-template>

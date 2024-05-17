@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ISpells } from '@spells/state/spells.interface';
 import { debounceTime, distinctUntilChanged, finalize, tap } from 'rxjs';
+import { IMonster } from '@monsters/state/monsters.interface';
 
 @Component({
   selector: 'app-search-bar',
@@ -30,10 +31,10 @@ import { debounceTime, distinctUntilChanged, finalize, tap } from 'rxjs';
 })
 export class SearchBarComponent {
   @ViewChild('input') input: ElementRef<HTMLInputElement> | undefined;
-  @Input() options: ISpells[] = [];
-  @Input() field: string = '';
-  @Output() onSelection: EventEmitter<ISpells[]> = new EventEmitter<
-    ISpells[]
+  @Input() options: ISpells[] | IMonster[] = [];
+  @Input() label: string = '';
+  @Output() onSelection: EventEmitter<any> = new EventEmitter<
+    ISpells[] | IMonster[]
   >();
   @Output() searchLoading: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -56,9 +57,9 @@ export class SearchBarComponent {
           this.searchLoading.emit(false);
           return;
         }
-        const filteredOptions = this.options.filter((o: ISpells) =>
-          o.name.toLowerCase().includes(val)
-        );
+        const filteredOptions: ISpells[] | IMonster[] = this.options.filter(
+          (o: ISpells | IMonster) => o.name.toLowerCase().includes(val)
+        ) as ISpells[] | IMonster[];
         this.onSelection.emit(filteredOptions);
         this.searchLoading.emit(false);
       });

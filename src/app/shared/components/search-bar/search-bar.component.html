@@ -1,10 +1,10 @@
 <form class="search-bar">
   <mat-form-field class="search-bar_field">
-    <mat-label>Search Spell...</mat-label>
+    <mat-label>{{ label }}</mat-label>
     <input
       #input
       type="text"
-      placeholder="Type the spell name"
+      placeholder="Type the name"
       matInput
       [formControl]="term"
       autocomplete="off"

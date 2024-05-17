@@ -64,15 +64,6 @@ export class SpellsComponent {
         console.error(err);
       },
     });
-
-    if (this.spellList?.length === 0) {
-      const spellsRef = this.database.list('spells');
-      spellsRef.valueChanges().subscribe((val) => {
-        this.spellList = val as ISpells[];
-        this.store.setSpells(this.spellList);
-        this.pageLoading = false;
-      });
-    }
   }
 
   fetchData() {

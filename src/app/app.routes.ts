@@ -19,4 +19,11 @@ export const routes: Routes = [
         (c) => c.SpellsComponent
       ),
   },
+  {
+    path: 'monsters',
+    loadComponent: () =>
+      import('./modules/monsters/pages/monsters/monsters.component').then(
+        (c) => c.MonstersComponent
+      ),
+  },
 ];

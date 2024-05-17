@@ -4,6 +4,7 @@
   <div class="wrapper">
     <app-search-bar
       [options]="rawList"
+      label="Search Spell..."
       (onSelection)="onSelection($event)"
       (searchLoading)="handleSearchLoading($event)"
     />
