@@ -1,0 +1,34 @@
+<mat-card class="game_card" [class.game_card--loading]="loading">
+  <h2 class="game_card__title">{{ title }}</h2>
+  <p *ngIf="desc">{{ desc | slice : 0 : 60 }}...</p>
+
+  <ng-container *ngIf="!loading; else skeleton">
+    <ng-content></ng-content>
+  </ng-container>
+</mat-card>
+
+<ng-template #skeleton>
+  <div>
+    <ngx-skeleton-loader
+      *ngIf="hasThumbnail"
+      appearance="line"
+      animation="progress-dark"
+      [theme]="{
+        height: '100px',
+        opacity: '0.4',
+        width: '40%',
+        marginLeft: '30%'
+      }"
+    />
+    <ngx-skeleton-loader
+      appearance="line"
+      animation="progress-dark"
+      [theme]="{ height: '30px', opacity: '0.3' }"
+    />
+    <ngx-skeleton-loader
+      appearance="line"
+      animation="progress-dark"
+      [theme]="{ width: '60%', height: '30px', opacity: '0.3' }"
+    />
+  </div>
+</ng-template>

@@ -1,6 +1,10 @@
 @use "../../../../assets/scss/mixins.scss" as mx;
 @import "../../../../assets/scss/sizing";
 
+:host {
+  height: 100%;
+}
+
 .header_menu {
   position: relative;
   display: flex;
@@ -47,7 +51,7 @@
     }
 
     &:hover,
-    &.router-link-active {
+    &.active {
       color: var(--clr-lighter);
       border-bottom-color: var(--clr-red-dark);
     }

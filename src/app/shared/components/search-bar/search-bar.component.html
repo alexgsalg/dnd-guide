@@ -1,0 +1,17 @@
+<form class="search-bar">
+  <mat-form-field class="search-bar_field">
+    <mat-label>Search Spell...</mat-label>
+    <input
+      #input
+      type="text"
+      placeholder="Type the spell name"
+      matInput
+      [formControl]="term"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
