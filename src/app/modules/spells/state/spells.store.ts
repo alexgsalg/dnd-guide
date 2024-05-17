@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { createStore, select, setProps, withProps } from '@ngneat/elf';
 import {
   persistState,
@@ -5,7 +6,6 @@ import {
   sessionStorageStrategy,
 } from '@ngneat/elf-persist-state';
 import { ISpells } from './spells.interface';
-import { Injectable } from '@angular/core';
 
 interface SpellProps {
   list: ISpells[];

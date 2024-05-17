@@ -1,4 +1,4 @@
-@import "../../../../assets/scss/sizing";
+@import "../../../../../assets/scss/sizing";
 
 .hero {
   width: 100%;
@@ -11,7 +11,7 @@
       rgba(35, 43, 47, 0),
       rgba(35, 43, 47, 0.5)
     ),
-    url("../../../../assets/images/embers.png");
+    url("../../../../../assets/images/embers.png");
   background-position: 50% 75%;
   background-size: cover;
 
@@ -56,7 +56,7 @@
       rgba(35, 43, 47, 0),
       rgba(35, 43, 47, 0.9)
     ),
-    url("../../../../assets/images/dnd.jpg");
+    url("../../../../../assets/images/dnd.jpg");
   background-position: 50%;
   background-size: cover;
 

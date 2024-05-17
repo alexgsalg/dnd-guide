@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomePage } from './home/pages/home/home.component';
+import { HomePage } from './modules/home/pages/home/home.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +15,7 @@ export const routes: Routes = [
   {
     path: 'spells',
     loadComponent: () =>
-      import('./spells/pages/spells/spells.component').then(
+      import('./modules/spells/pages/spells/spells.component').then(
         (c) => c.SpellsComponent
       ),
   },

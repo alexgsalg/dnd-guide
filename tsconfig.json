@@ -30,13 +30,13 @@
         "./src/app/shared/*"
       ],
       "@home/*": [
-        "./src/app/home/*"
+        "./src/app/modules/home/*"
       ],
       "@spells/*": [
-        "./src/app/spells/*"
+        "./src/app/modules/spells/*"
       ],
       "@monsters/*": [
-        "./src/app/monsters/*"
+        "./src/app/modules/monsters/*"
       ],
     }
   },
