@@ -19,7 +19,7 @@ export interface INavList {
 export class HeaderMenuComponent {
   @Input() show: boolean = false;
   navList: INavList[] = [
-    { name: 'Home', route: '/', icon: 'nav-home' },
+    { name: 'Home', route: '/home', icon: 'nav-home' },
     { name: 'Spells', route: '/spells', icon: 'nav-spells' },
     {
       name: 'Monsters',
