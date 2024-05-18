@@ -26,4 +26,26 @@ export const routes: Routes = [
         (c) => c.MonstersComponent
       ),
   },
+  // {
+  //   path: 'classes',
+  //   loadComponent: () =>
+  //     import('./modules/classes/pages/classes/classes.component').then(
+  //       (c) => c.ClassesComponent
+  //     ),
+  // },
+  // {
+  //   path: 'races',
+  //   loadComponent: () =>
+  //     import('./modules/races/pages/races/races.component').then(
+  //       (c) => c.RacesComponent
+  //     ),
+  // },
+
+  {
+    path: 'characters',
+    loadComponent: () =>
+      import('./modules/characters/pages/characters/characters.component').then(
+        (c) => c.CharactersComponent
+      ),
+  },
 ];

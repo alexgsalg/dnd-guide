@@ -1,0 +1,25 @@
+.characters {
+  padding: 2vh 2rem 10vh;
+}
+
+.sidebar {
+  &__item {
+  }
+}
+:host {
+  .mat-tab-group {
+    flex-direction: row !important;
+  }
+
+  .mat-tab-labels {
+    flex-direction: column !important;
+  }
+
+  .mat-tab-label-active {
+    border-right: 2px solid red !important;
+  }
+
+  .mat-ink-bar {
+    display: none;
+  }
+}

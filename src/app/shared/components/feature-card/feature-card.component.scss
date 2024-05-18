@@ -2,7 +2,8 @@
 
 .feature_card {
   background-color: var(--clr-vintage);
-  border-radius: $size-2xs;
+  border-radius: $size-tiny;
+  overflow: hidden;
 
   &__header {
     padding: 0;
